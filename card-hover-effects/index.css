@@ -1,0 +1,70 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+#container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #101010;
+}
+.card{
+    position: relative;
+    width: 350px;
+    height: 450px;
+    background-color: #1a1919;
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+.card span{
+    position: absolute;
+    right: -20px;
+    bottom: 50px;
+    padding: 10px 40px;
+    font-size: 1.5em;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    color: #fff;
+    font-weight: 600;
+    opacity: 0;
+    transition: 0.5s;
+}
+.card span.barbarian{
+    background-color: rgb(255, 189, 67)
+}
+.card span.archer{
+    background-color: rgb(240, 109, 240)
+}
+
+.card img.first{
+    opacity: 1;
+    transition: 0.5s;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card img.second{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 0.5s;
+    
+}
+.card:hover span{
+opacity: 1;
+}
+.card:hover img.first{
+    opacity: 0;
+}
+
+.card:hover img.second{
+    top: -50px;
+    opacity: 1;
+    
+}
