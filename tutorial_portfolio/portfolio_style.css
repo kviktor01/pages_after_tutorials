@@ -44,7 +44,7 @@ header .logo span {
 }
 header .toggle{
     position: relative;
-    background: url(/assets/portfolio/menu.png);
+    background: url(/assets/menu.png);
     width: 30px;
     height: 30px;
     background-repeat: no-repeat;
@@ -53,7 +53,7 @@ header .toggle{
     cursor: pointer;
 }
 header .toggle.active{
-    background: url(/assets/portfolio/close.png);
+    background: url(/assets/close.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 30px
