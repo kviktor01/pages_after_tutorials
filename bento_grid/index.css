@@ -1,0 +1,381 @@
+* {
+	box-sizing: border-box;
+	font-family: "DM Sans", serif;
+}
+
+body {
+	background-color: rgb(250, 249, 249);
+}
+
+main {
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(
+			0,
+			1fr
+		);
+	grid-template-rows: 1fr 0.5fr 0.5fr 1fr;
+	height: 100vh;
+	min-height: 0; /* NEW */
+	min-width: 0;
+	padding: 2rem;
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+.card {
+	background-color: white;
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+.card img {
+	display: block;
+}
+
+.card.purple-bg {
+	background-color: hsl(256, 67%, 59%);
+	color: white;
+}
+
+.card.light-purple-bg {
+	background-color: hsl(254, 88%, 90%);
+}
+
+.card.yellow-bg {
+	background-color: hsl(39, 100%, 71%);
+}
+
+.card.light-yellow-bg {
+	background-color: hsl(31, 66%, 93%);
+}
+
+#ai-content-card {
+	grid-column-start: 1;
+	grid-column-end: 1;
+	grid-row-start: 3;
+	grid-row-end: 5;
+}
+
+#ai-content-card img {
+	margin: auto;
+	width: 220px;
+}
+
+#ai-content-card img,
+#social-media-card img,
+#create-content-card img,
+#audience-growth-card img {
+	max-width: 100%;
+}
+
+#social-media-card {
+	grid-column-start: 2;
+	grid-column-end: 4;
+	padding: 1rem 8rem;
+	text-align: center;
+}
+
+#social-media-card h1 {
+	font-size: 2.5rem;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+#social-media-card h1 span {
+	color: hsl(39, 100%, 71%);
+}
+
+#social-media-card img {
+	display: block;
+	margin: 5px auto;
+	width: 150px;
+}
+
+#create-content-card {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 3;
+	padding: 0.5rem 3.5rem;
+}
+
+#create-content-card img {
+	margin: 5px auto;
+	width: 200px;
+}
+
+#create-content-card h2 span {
+	color: hsl(256, 67%, 59%);
+}
+
+#schedule-card {
+	grid-column-start: 4;
+	grid-column-end: 5;
+	grid-row-start: 1;
+	grid-row-end: 4;
+	overflow: hidden;
+}
+
+#schedule-card img {
+	margin-left: 100px;
+	margin-bottom: 20px;
+	width: 230px;
+}
+
+#multiple-accounts-card img {
+	overflow: hidden;
+	width: 250px;
+}
+
+#multiple-accounts-card {
+	grid-row-start: 2;
+	grid-row-end: 4;
+	overflow: hidden;
+}
+
+#multiple-accounts-card h2 {
+	margin-top: 5px;
+}
+
+#audience-growth-card {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 4;
+	grid-row-end: 5;
+}
+
+#audience-growth-card h1 {
+	font-size: 3.5rem;
+	margin: 5px;
+}
+
+#audience-growth-card img {
+	margin-top: 30px;
+	width: 220px;
+}
+
+#grow-followers-card img {
+	width: 40%;
+}
+
+#grow-followers-card {
+	align-items: center;
+	display: flex;
+	grid-column-start: 3;
+	grid-column-end: 5;
+}
+
+#consistent-posting-card {
+	grid-row-start: 2;
+	grid-row-end: 4;
+	overflow: hidden;
+}
+
+#consistent-posting-card img {
+	margin: auto;
+	width: 250px;
+}
+
+#consistent-posting-card h2 {
+	margin: 5px;
+}
+
+@media screen and (max-width: 1200px) {
+	#social-media-card {
+		padding: 1rem 4rem;
+		text-align: center;
+	}
+
+	#create-content-card {
+		padding: 0.5rem 1.5rem;
+	}
+
+	#consistent-posting-card img {
+		width: 200px;
+	}
+
+	#ai-content-card img {
+		width: 150px;
+	}
+}
+
+@media screen and (max-width: 1025px) {
+	main {
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+		grid-template-rows: 0.5fr 0.5fr 1fr 0.5fr 0.8fr;
+		height: 100vh;
+		min-height: 0; /* NEW */
+		min-width: 0;
+		padding: 2rem;
+		height: auto;
+	}
+
+	#social-media-card {
+		padding: 1rem 2rem;
+		text-align: center;
+		grid-column-start: 1;
+		grid-column-end: 3;
+	}
+
+	#multiple-accounts-card {
+		grid-row-start: 2;
+		grid-row-end: 2;
+		grid-column-start: 1;
+		grid-column-end: 1;
+	}
+
+	#consistent-posting-card {
+		grid-row-start: 2;
+		grid-row-end: 2;
+		grid-column-start: 2;
+		grid-column-end: 2;
+	}
+
+	#consistent-posting-card img {
+		margin-top: 20px;
+		width: 150px;
+	}
+
+	#grow-followers-card {
+		flex-direction: column;
+		grid-row-start: 3;
+		grid-row-end: 3;
+		grid-column-start: 1;
+		grid-column-end: 1;
+	}
+
+	#grow-followers-card img {
+		width: 200px;
+	}
+	#schedule-card {
+		grid-column-start: 2;
+		grid-column-end: 2;
+		grid-row-start: 3;
+		grid-row-end: 3;
+	}
+
+	#audience-growth-card {
+		grid-column-start: 1;
+		grid-column-end: 1;
+		grid-row-start: 4;
+		grid-row-end: 4;
+	}
+
+	#create-content-card {
+		grid-column-start: 2;
+		grid-column-end: 2;
+		grid-row-start: 4;
+		grid-row-end: 4;
+	}
+
+	#ai-content-card {
+		grid-column-start: 1;
+		grid-column-end: 3;
+		grid-row-start: 5;
+		grid-row-end: 5;
+	}
+
+	#ai-content-card img {
+		width: 200px;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	main {
+		gap: 1rem;
+		grid-template-columns: minmax(0, 1fr);
+		grid-template-rows: 0.5fr 0.5fr 0.5fr 1fr 0.8fr 0.5fr 0.5fr 0.8fr;
+		height: 100vh;
+		min-height: 0; /* NEW */
+		min-width: 0;
+		padding: 2rem;
+		height: auto;
+	}
+
+	#social-media-card {
+		padding: 1rem 2rem;
+		text-align: center;
+		grid-column-start: 1;
+		grid-column-end: 1;
+		grid-row-start: 1;
+		grid-row-end: 1;
+	}
+
+	#multiple-accounts-card {
+		grid-row-start: 2;
+		grid-row-end: 2;
+		grid-column-start: 1;
+		grid-column-end: 1;
+	}
+
+	#consistent-posting-card {
+		grid-row-start: 3;
+		grid-row-end: 3;
+		grid-column-start: 1;
+		grid-column-end: 1;
+	}
+
+	#consistent-posting-card img {
+		margin-left: 10px;
+		margin-top: 20px;
+		width: 150px;
+	}
+
+	#schedule-card {
+		grid-column-start: 1;
+		grid-column-end: 1;
+		grid-row-start: 4;
+		grid-row-end: 4;
+	}
+
+	#schedule-card img {
+		margin: 20px auto;
+		width: 300px;
+		max-width: 100%;
+	}
+
+	#grow-followers-card {
+		flex-direction: column;
+		grid-row-start: 5;
+		grid-row-end: 5;
+		grid-column-start: 1;
+		grid-column-end: 1;
+	}
+
+	#grow-followers-card img {
+		width: 200px;
+	}
+
+	#audience-growth-card {
+		grid-column-start: 1;
+		grid-column-end: 1;
+		grid-row-start: 6;
+		grid-row-end: 6;
+	}
+
+	#create-content-card {
+		grid-column-start: 1;
+		grid-column-end: 1;
+		grid-row-start: 7;
+		grid-row-end: 7;
+	}
+
+	#ai-content-card {
+		grid-column-start: 1;
+		grid-column-end: 1;
+		grid-row-start: 8;
+		grid-row-end: 8;
+	}
+
+	#ai-content-card img {
+		width: 200px;
+	}
+}
